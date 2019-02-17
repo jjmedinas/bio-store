@@ -3,9 +3,13 @@ class ProductSerializer < ActiveModel::Serializer
 
 
   def images
-    self.object.images.map{|i|
-      Rails.application.routes.url_helpers.rails_blob_url(i, host: ENV['HOST'])
-    }
+    if self.object.images.attached?
+      self.object.images.map{|i|
+        Rails.application.routes.url_helpers.rails_blob_url(i, host: ENV['HOST'])
+      }
+    else
+      []
+    end
   end
 
   def category

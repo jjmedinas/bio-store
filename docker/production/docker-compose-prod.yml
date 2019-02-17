@@ -15,4 +15,4 @@ services:
       - db
     environment:
       - DEVISE_JWT_SECRET_KEY=f6588d1e22e8ebf4e747bfe9e5c9510fbd3e5101094e7681485c5c9cc23d6d181e206898990d0aff4825fd65979eb93b15250f913dd88e318295c832d08dbd28
-      - HOST=http://localhost:3000
+      - HOST
