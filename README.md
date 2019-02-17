@@ -3,8 +3,10 @@
 
 ## To run the project
 1. `docker-compose build`
-2. `docker-compose run web rails db:seed`
-3. `docker-compose up`
+2. `docker-compose run --rm web rails db:create`
+3. `docker-compose run --rm web rails db:migrate`
+4. `docker-compose run web rails db:seed`
+5. `docker-compose up`
 
 
 ## Create Users
