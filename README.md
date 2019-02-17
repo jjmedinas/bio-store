@@ -1,6 +1,11 @@
 
 # README Bio Store
 
+## To run the project
+1. `docker-compose build`
+2. `docker-compose run web rails db:seed`
+3. `docker-compose up`
+
 
 ## Create Users
 
