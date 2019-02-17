@@ -1,3 +1,4 @@
+
 # README Bio Store
 
 
@@ -34,3 +35,49 @@ It creates and returns JWT  in the Authorization Bearer header
     "password": "12345678"
     }
   }
+
+
+
+## Create Category
+
+It is used to create categories.
+
+- `POST /categories/`
+  Payload:
+
+
+  ```
+  {
+  "category": {
+    "name": "Suplementos",
+    }
+  }
+### Upload Category  Image
+
+It is used to upload a category image.
+
+- `POST /categories/:slug/upload_image`
+
+## Create Product
+
+It is used to create products.
+
+- `POST /categories/`
+  Payload:
+
+  ```
+  {
+  "product": {
+    "name": "Producto tal tal subir peso",
+    "category_id": "1",
+    "user_id": "2",
+    "description": "Ganador de peso. asddm ,asd3 sd",
+    "stock": 40,
+    "price": 15.000
+    }
+  }
+### Upload  Product  Images
+
+It is used to upload several images for a product.
+
+- `POST /products/:slug/upload_images`

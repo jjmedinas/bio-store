@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :update, :destroy]
+  before_action :set_product, only: [:show, :update, :destroy, :upload_images]
   # before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   # GET /products
@@ -37,6 +37,10 @@ class ProductsController < ApplicationController
   # DELETE /products/slug-here
   def destroy
     @product.destroy
+  end
+
+  def upload_images
+    @product.images.attach(params.require(:images))
   end
 
   private
