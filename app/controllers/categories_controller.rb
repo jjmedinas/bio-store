@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :update, :destroy]
+  before_action :set_category, only: [:show, :update, :destroy, :upload_image]
   # before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   # GET /categories
@@ -37,6 +37,10 @@ class CategoriesController < ApplicationController
   # DELETE /categories/slug-here
   def destroy
     @category.destroy
+  end
+
+  def upload_image
+    @category.image.attach(params.require(:image))
   end
 
   private

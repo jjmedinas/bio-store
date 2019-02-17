@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   resources :users
   resources :products
   resources :categories
+
+  post 'categories/:id/upload_image', to: "categories#upload_image", as: :upload_category_image
+  post 'products/:id/upload_images', to: "products#upload_images", as: :upload_product_images
 end
