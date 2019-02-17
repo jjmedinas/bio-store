@@ -2,6 +2,7 @@ class User < ApplicationRecord
   before_save   :downcase_email
 
   VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z]+[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+  ROLES = ['buyer', 'seller', 'admin']
 
   validates :name,  presence: true
   validates :nickname,  presence: true

@@ -4,7 +4,8 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.where(role: params[:role])
+    role = params[:role] || User::ROLES
+    @users = User.where(role: role)
 
     render json: @users
   end
