@@ -78,7 +78,7 @@ It is used to create products.
     "user_id": "2",
     "description": "Ganador de peso. asddm ,asd3 sd",
     "stock": 40,
-    "price": 15.000
+    "price": 15000
     }
   }
 ### Upload  Product  Images

@@ -28,20 +28,20 @@
 
   huevos = Product.create(name: "Huevos de granja", category: alimentos, user: vendedor,
                           description: "Huevos organicos de granja, tamaño AA, sin hormonas de crecimiento.",
-                          stock: 20, price: 16.000)
+                          stock: 20, price: 16000)
   huevos.images.attach(io: File.open("#{path}/products/huevos/huevos1.jpg"), filename: 'huevos1.jpg')
   huevos.images.attach(io: File.open("#{path}/products/huevos/huevos2.jpg"), filename: 'huevos2.jpg')
 
 
   matera = Product.create(name: "Matera rústica", category: decoracion, user: vendedor,
                           description: "Matera rústica de roble, sin pintura con toxicos, para decoración de cualquier espacio.",
-                          stock: 8, price: 65.000)
+                          stock: 8, price: 65000)
   matera.images.attach(io: File.open("#{path}/products/matera/matera1.jpg"), filename: 'matera1.jpg')
   matera.images.attach(io: File.open("#{path}/products/matera/matera2.jpg"), filename: 'matera2.jpg')
 
   aceite_almendras = Product.create(name: "Aceite Almendras Organico", category: decoracion, user: vendedor,
                           description: "Aceite Almendras Organico. Ideal para remover maquillaje en las noches, Ayuda a la elasticidad, brillo y humectación de nuestra piel.",
-                          stock: 12, price: 27.000)
+                          stock: 12, price: 27000)
   aceite_almendras.images.attach(io: File.open("#{path}/products/aceite-almendras-organico/aceite-almendras-organico1.jpg"), filename: 'aceite-almendras-organico1.jpg')
   aceite_almendras.images.attach(io: File.open("#{path}/products/aceite-almendras-organico/aceite-almendras-organico2.jpg"), filename: 'aceite-almendras-organico2.jpg')
 
