@@ -62,7 +62,7 @@ It is used to upload a category image.
 
 It is used to create products.
 
-- `POST /categories/`
+- `POST /products/`
   Payload:
 
   ```
