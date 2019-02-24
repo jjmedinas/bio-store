@@ -36,6 +36,29 @@ You can filter out users by role. It can be on of `['seller', 'buyer', 'admin']`
 Example:  `/users?role=buyer&state=blocked`
 
 
+
+## Block Users
+
+It is used to block a user. User id needs to be sent.
+
+- `POST /users/block`
+  Payload:
+
+  ```
+    {
+      "id": 1
+    }
+## Unblock Users
+
+It is used to unblock a user. User id needs to be sent.
+
+- `POST /users/unblock`
+  Payload:
+
+  ```
+    {
+      "id": 1
+    }
 ## Create Token / Login
 
 It creates and returns JWT  in the Authorization Bearer header

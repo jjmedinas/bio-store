@@ -17,6 +17,15 @@ class User < ApplicationRecord
          :jwt_authenticatable,
          jwt_revocation_strategy: JWTBlacklist
 
+
+  def block!
+    self.update_attributes(state: 'blocked')
+  end
+
+  def unblock!
+    self.update_attributes(state: 'active')
+  end
+
   private
 
     def downcase_email
