@@ -119,3 +119,36 @@ It is used to create products.
 It is used to upload several images for a product.
 
 - `POST /products/:slug/upload_images`
+
+## List Invoices
+- `GET /invoices/`
+
+It returns the invoices for the current user.
+If the current_user is a buyer, it returns
+```
+  {
+    "compras": [
+        {
+            "identifier": "c83fe604-94dc-3774999f24e2",
+            "seller": "Pepito Perez",
+            "description": "Product One x3, Product Two x2",
+            "total": 32421,
+            "sending_address": null
+        }
+    ]
+  }
+```
+If the current_user is a seller, it returns
+```
+  {
+    "ventas": [
+        {
+            "identifier": "c83fe604-94dc-3774999f24e2",
+            "seller": "Pepito Perez",
+            "description": "Product One x3, Product Two x2",
+            "total": 32421,
+            "sending_address": null
+        }
+    ]
+  }
+```

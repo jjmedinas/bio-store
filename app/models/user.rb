@@ -26,6 +26,14 @@ class User < ApplicationRecord
     self.update_attributes(state: 'active')
   end
 
+  def buyer?
+    self.role == "buyer"
+  end
+
+  def seller?
+    self.role == "seller"
+  end
+
   private
 
     def downcase_email

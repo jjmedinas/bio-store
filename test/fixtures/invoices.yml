@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  identifier: MyString
+  seller_id: 1
+  buyer_id: 1
+  description: MyText
+  total: 1.5
+  sending_address: MyString
+
+two:
+  identifier: MyString
+  seller_id: 1
+  buyer_id: 1
+  description: MyText
+  total: 1.5
+  sending_address: MyString
