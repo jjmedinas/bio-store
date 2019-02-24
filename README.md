@@ -28,6 +28,14 @@ It is used to create users.  'role' can be `['seller', 'buyer', 'admin']`
     }
   }
 
+## List Users
+- `GET /users/`
+
+You can filter out users by role. It can be on of `['seller', 'buyer', 'admin']`. Or by state `['active', 'blocked']`
+
+Example:  `/users?role=buyer&state=blocked`
+
+
 ## Create Token / Login
 
 It creates and returns JWT  in the Authorization Bearer header

@@ -3,6 +3,7 @@ class User < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A([\w+\-].?)+@[a-z]+[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   ROLES = ['buyer', 'seller', 'admin']
+  STATES = ['active', 'blocked']
 
   validates :name,  presence: true
   validates :nickname,  presence: true
