@@ -120,6 +120,23 @@ It is used to upload several images for a product.
 
 - `POST /products/:slug/upload_images`
 
+## Create Invoices
+- `POST /invoices/`
+
+It is used to create invoices. It will set the buyer_id by getting info from current_user and seller_id and price per product will be set by searching the product info on db.
+
+```
+  {
+    "invoice": {
+            "products": {
+              "product1_identifer":  3,
+              "product2_identifer": 2
+            },
+            "sending_address": null
+        }
+  }
+```
+
 ## List Invoices
 - `GET /invoices/`
 
@@ -141,7 +158,7 @@ If the current_user is a buyer, it returns
 If the current_user is a seller, it returns
 ```
   {
-    "ventas": [
+    "Ventas": [
         {
             "identifier": "c83fe604-94dc-3774999f24e2",
             "seller": "Pepito Perez",
