@@ -1,5 +1,5 @@
 class ProductSerializer < ActiveModel::Serializer
-  attributes :name, :identifier, :slug, :description, :stock, :price, :category, :images
+  attributes :name, :identifier, :slug, :description, :stock, :price, :seller, :category, :images
 
 
   def images
@@ -18,5 +18,9 @@ class ProductSerializer < ActiveModel::Serializer
       name: category.name,
       slug: category.slug
     }
+  end
+
+  def seller
+    User.find_by(id: self.object.user_id).try(:name)
   end
 end
